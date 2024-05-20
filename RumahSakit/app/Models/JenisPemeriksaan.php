@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class JenisPemeriksaan extends Model
+{
+    use HasFactory;
+
+    protected $table = 'table_jenis_pemeriksaan';
+
+    protected $fillable = [
+        'jenis_pemeriksaan'
+    ];
+}

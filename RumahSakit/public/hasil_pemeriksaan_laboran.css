@@ -1,0 +1,846 @@
+<<<<<<< HEAD
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.Dasar {
+    display: flex;
+    height: 97vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+.kiri {
+    flex: 2.5;
+    background-image: url(../gambar/kiri-1.png);
+    background-size: cover; /* Mengatur agar gambar ditampilkan sepenuhnya tanpa terpotong */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-position: center; /* Posisi gambar di tengah-tengah */
+    display: flex;
+    flex-direction: column;
+}
+
+.atas-kiri {
+    flex: 1.5;
+    display: flex; /* Mengatur tata letak menjadi flex */
+    align-items: center;
+}
+
+.bawah-kiri {
+    flex: 8.5;
+}
+
+.kanan {
+    flex: 7.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.atas-kanan {
+    flex: 1.1;
+    display: flex;
+    align-items: center;
+    background-color: #e8e8e8;
+}
+
+.bawah-kanan {
+    flex: 8.5;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.konten {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #555cb3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 0px;
+}
+
+.konten-atas {
+    width: 100%;
+    flex: 1;
+    background-image: linear-gradient(to right, #8b55fe, #5ddde7);
+}
+
+.konten-bawah {
+    width: 100%;
+    flex: 9;
+    flex-wrap: wrap;
+}
+
+.logo-kiri-atas {
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.teks-logo-kiri-atas {
+    height: 30px;
+    font-size: 28px;
+    color: white;
+}
+
+.logo-kanan-atas {
+    margin-left: 40px;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.teks-logo-kanan-atas {
+    height: 30px;
+    font-size: 28px;
+    color: black;
+}
+
+.btn-kiri-1 {
+    margin-left: 25px;
+    margin-top: 2px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    transition: all ease-in 0.3s;
+}
+
+.btn-kiri-1:hover {
+    background-color: #555cb3;
+    transition: all ease-in 0.3s;
+    transform: scale(1.05);
+}
+
+.btn-kiri-1 .btn-icon {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+
+.btn-kiri-1 .btn-text {
+    vertical-align: middle;
+}
+
+.search-input {
+    margin-left: 15px;
+    background: url("../gambar/icon-search.png") no-repeat 240px center;
+    background-size: 20px 20px;
+    background-color: #555cb3;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 13px;
+    font-size: 16px;
+    width: 250px;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-input::placeholder {
+    color: white;
+}
+
+.search-input:focus {
+    background-color: white;
+    color: black;
+}
+
+.konten-atas .teks {
+    margin-left: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+.bi-bell-fill {
+    padding: 7px;
+    color: rgb(86, 92, 198);
+    font-size: 32px;
+    margin-left: 420px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.aktif_btn {
+    margin-left: 25px;
+    margin-top: 2px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    background-color: #555cb3;
+}
+
+.aktif_btn .btn-icon {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+
+.aktif_btn .btn-text {
+    vertical-align: middle;
+}
+
+.dokter {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    border: 2px solid #555cb3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    color: #555cb3;
+}
+
+.isi {
+    width: 95%;
+    justify-items: center;
+    margin-top: 10px;
+    margin-left: 18px;
+}
+.table-container {
+    display: flex;
+    width: 100%; /* Atur lebar 100% agar kontainer dapat menyesuaikan lebar parent */
+    margin-left: 30px;
+}
+
+.table1 {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.table2 {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.textarea {
+    width: 250px;
+    height: 70px;
+    border-radius: 7px;
+    border: none;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.input1 {
+    width: 250px;
+    height: 23px;
+    border-radius: 7px;
+    border: none;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.btn_sop {
+    margin-left: 230px;
+    border: none;
+    background-color: rgb(137, 91, 252);
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.textt {
+    color: white;
+}
+
+.text {
+    color: White;
+    margin-left: 5px;
+}
+
+.titik {
+    color: White;
+    margin-left: 5px;
+    margin-bottom: -10px;
+}
+
+.btn {
+    width: 70px;
+    background-color: rgb(137, 91, 252);
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    transition: all ease-in 0.3s;
+    border: 2px solid white;
+}
+
+.btn:hover {
+    transition: all ease-in 0.3s;
+    transform: scale(1.2);
+    border: 2px solid white;
+}
+
+.border {
+    border: 2px solid white;
+    justify-content: center;
+    height: 170px;
+    padding: 0px;
+    margin-top: 20px;
+    margin-left: 8px;
+    display: flex;
+    width: 100%;
+}
+
+.btn_simpan {
+    border: 2px solid white;
+    background-color: rgb(137, 91, 252);
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    margin-left: 950px;
+    transition: all ease-out 0.3s;
+    margin-top: 10px;
+}
+
+.checkbox {
+    border: none;
+    background-color: rgb(137, 91, 252);
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    transition: all ease-out 0.3s;
+
+    display: flex;
+    align-items: center; /* Menengahkan konten secara vertikal */
+}
+
+.checkbox-container {
+    padding: 5px;
+    display: flex; /* Menjadikan kontainer flex */
+    align-items: center; /* Mengatur agar konten vertikalnya berada di tengah */
+}
+
+.label {
+    color: white;
+    margin-left: 5px;
+    margin-right: 50px; /* Mengurangi margin di sisi kanan agar lebih rapi */
+}
+
+.btn_lihat:hover {
+    transition: all ease-in 0.3s;
+    transform: scale(1.1);
+}
+
+.btn_simpan:hover {
+    transition: all ease-in 0.3s;
+    transform: scale(1.1);
+}
+
+.border2 {
+    border: 2px solid white;
+    height: 260px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 8px;
+    display: flex; /* Menjadikan elemen sebagai kontainer fleksibel */
+    flex-direction: column; /* Mengatur arah anak-anaknya menjadi vertikal */
+    /* Menengahkan anak-anak secara horizontal */
+    width: 100%;
+}
+.table3 {
+    width: 95%;
+    height: 120px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 25px;
+}
+
+.table3 td,
+.table3 th {
+    border: 2px solid white; /* Menambahkan garis solid dengan ketebalan 1px */
+    padding: 8px; /* Memberikan padding agar konten tidak terlalu dekat dengan garis */
+}
+
+.catatan {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.textarea_catatan {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.text_area {
+    color: white;
+    margin-bottom: 5px;
+    align-self: flex-start; /* Aligns the label to the left */
+    align-items: flex-start; /* Aligns the label's items (if any) to the left */
+    justify-content: flex-start;
+}
+
+.footer {
+    background-image: linear-gradient(
+        90deg,
+        rgb(137, 91, 252),
+        rgb(93, 225, 230)
+    );
+    height: 3vh;
+}
+=======
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.Dasar {
+  display: flex;
+  height: 97vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.kiri {
+  flex: 2.5;
+  background-image: url(../gambar/kiri-1.png);
+  background-size: cover; /* Mengatur agar gambar ditampilkan sepenuhnya tanpa terpotong */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  background-position: center; /* Posisi gambar di tengah-tengah */
+  display: flex;
+  flex-direction: column;
+}
+
+.atas-kiri {
+  flex: 1.5;
+  display: flex; /* Mengatur tata letak menjadi flex */
+  align-items: center;
+}
+
+.bawah-kiri {
+  flex: 8.5;
+}
+
+.kanan {
+  flex: 7.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.atas-kanan {
+  flex: 1.1;
+  display: flex;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+
+.bawah-kanan {
+  flex: 8.5;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten {
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #555cb3;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 0px;
+}
+
+.konten-atas {
+  width: 100%;
+  flex: 1;
+  background-image: linear-gradient(to right, #8b55fe, #5ddde7);
+}
+
+.konten-bawah {
+  width: 100%;
+  flex: 9;
+  flex-wrap: wrap;
+}
+
+.logo-kiri-atas {
+  margin-left: 20px;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.teks-logo-kiri-atas {
+  height: 30px;
+  font-size: 28px;
+  color: white;
+}
+
+.logo-kanan-atas {
+  margin-left: 40px;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.teks-logo-kanan-atas {
+  height: 30px;
+  font-size: 28px;
+  color: black;
+}
+
+.btn-kiri-1 {
+  margin-left: 25px;
+  margin-top: 2px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  transition: all ease-in 0.3s;
+}
+
+.btn-kiri-1:hover {
+  background-color: #555cb3;
+  transition: all ease-in 0.3s;
+  transform: scale(1.05);
+}
+
+.btn-kiri-1 .btn-icon {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: -4px;
+}
+
+.btn-kiri-1 .btn-text {
+  vertical-align: middle;
+}
+
+.search-input {
+  margin-left: 15px;
+  background: url("../gambar/icon-search.png") no-repeat 240px center;
+  background-size: 20px 20px;
+  background-color: #555cb3;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 13px;
+  font-size: 16px;
+  width: 250px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-input::placeholder {
+  color: white;
+}
+
+.search-input:focus {
+  background-color: white;
+  color: black;
+}
+
+.konten-atas .teks {
+  margin-left: 20px;
+  font-size: 22px;
+  color: white;
+}
+
+.bi-bell-fill {
+  padding: 7px;
+  color: rgb(86, 92, 198);
+  font-size: 32px;
+  margin-left: 420px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.aktif_btn {
+  margin-left: 25px;
+  margin-top: 2px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  background-color: #555cb3;
+}
+
+.aktif_btn .btn-icon {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: -4px;
+}
+
+.aktif_btn .btn-text {
+  vertical-align: middle;
+}
+
+.dokter {
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  border: 2px solid #555cb3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  color: #555cb3;
+}
+
+.isi {
+  width: 95%;
+  justify-items: center;
+  margin-top: 10px;
+  margin-left: 18px;
+}
+.table-container {
+  display: flex;
+  width: 100%; /* Atur lebar 100% agar kontainer dapat menyesuaikan lebar parent */
+  margin-left: 30px;
+}
+
+.table1 {
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.table2 {
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  width: 250px;
+  height: 70px;
+  border-radius: 7px;
+  border: none;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.input1 {
+  width: 250px;
+  height: 23px;
+  border-radius: 7px;
+  border: none;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.btn_sop {
+  margin-left: 230px;
+  border: none;
+  background-color: rgb(137, 91, 252);
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.textt {
+  color: white;
+}
+
+.text {
+  color: White;
+  margin-left: 5px;
+}
+
+.titik {
+  color: White;
+  margin-left: 5px;
+  margin-bottom: -10px;
+}
+
+.btn {
+  width: 70px;
+  background-color: rgb(137, 91, 252);
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  transition: all ease-in 0.3s;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  transition: all ease-in 0.3s;
+  transform: scale(1.2);
+  border: 2px solid white;
+}
+
+.border {
+  border: 2px solid white;
+  justify-content: center;
+  height: 170px;
+  padding: 0px;
+  margin-top: 20px;
+  margin-left: 8px;
+  display: flex;
+  width: 100%;
+}
+
+.btn_simpan {
+  border: 2px solid white;
+  background-color: rgb(137, 91, 252);
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  margin-left: 900px;
+  transition: all ease-out 0.3s;
+}
+
+.checkbox {
+  border: none;
+  background-color: rgb(137, 91, 252);
+  height: 30px;
+  width: 200px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  transition: all ease-out 0.3s;
+
+  display: flex;
+  align-items: center; /* Menengahkan konten secara vertikal */
+}
+
+.checkbox-container {
+  padding: 5px;
+  display: flex; /* Menjadikan kontainer flex */
+  align-items: center; /* Mengatur agar konten vertikalnya berada di tengah */
+}
+
+.label {
+  color: white;
+  margin-left: 5px;
+  margin-right: 50px; /* Mengurangi margin di sisi kanan agar lebih rapi */
+}
+
+.btn_lihat:hover {
+  transition: all ease-in 0.3s;
+  transform: scale(1.1);
+}
+
+.btn_simpan:hover {
+  transition: all ease-in 0.3s;
+  transform: scale(1.1);
+}
+
+.border2 {
+  border: 2px solid white;
+  height: 260px;
+  padding: 0px;
+  margin-top: 10px;
+  margin-left: 8px;
+  display: flex; /* Menjadikan elemen sebagai kontainer fleksibel */
+  flex-direction: column; /* Mengatur arah anak-anaknya menjadi vertikal */
+  /* Menengahkan anak-anak secara horizontal */
+  width: 100%;
+}
+.table3 {
+  width: 95%;
+  height: 120px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 25px;
+}
+
+.table3 td,
+.table3 th {
+  border: 2px solid white; /* Menambahkan garis solid dengan ketebalan 1px */
+  padding: 8px; /* Memberikan padding agar konten tidak terlalu dekat dengan garis */
+}
+
+.catatan {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea_catatan {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.text_area {
+  color: white;
+  margin-bottom: 5px;
+  align-self: flex-start; /* Aligns the label to the left */
+  align-items: flex-start; /* Aligns the label's items (if any) to the left */
+  justify-content: flex-start;
+}
+
+.footer {
+  background-image: linear-gradient(90deg, rgb(137, 91, 252), rgb(93, 225, 230));
+  height: 3vh;
+}
+>>>>>>> 846aa07fb8009eb404f03806317e939d04b82fe8
