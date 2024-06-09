@@ -38,6 +38,29 @@ class LaboranController extends Controller
         }
     }
 
+    public function getRiwayatData($id)
+    {
+        $riwayat = DaftarLaboratorium::find($id);
+
+        if ($riwayat) {
+            return response()->json([
+                'id' => $id,
+                'id_user' => $riwayat->id_user,
+                'name' => $riwayat->name,
+                'tgl_lahir' => $riwayat->tgl_lahir,
+                'jenis_kelamin' => $riwayat->jenis_kelamin,
+                'umur' => $riwayat->umur,
+                'alamat' => $riwayat->alamat,
+                'nama_pemeriksaan' => $riwayat->nama_pemeriksaan,
+                'jenis_pemeriksaan' => $riwayat->jenis_pemeriksaan,
+                'jaminan' => $riwayat->jaminan,
+                'diagnosa' => $riwayat->diagnosa,
+            ]);
+        } else {
+            return response()->json(['error' => 'Patient not found'], 404);
+        }
+    }
+
     public function halaman_login(){
         return view('laboran.menu_login');
     }
@@ -406,7 +429,6 @@ class LaboranController extends Controller
     list($namaPemeriksaan, $pemeriksaanId) = explode('-', $request->nama_pemeriksaan);
     list($jenisPemeriksaan, $jenisPemeriksaanId) = explode('-', $request->jenis_pemeriksaan);
 
-
     // Update or create DaftarLaboratorium record
     $daftarLaboratorium = DaftarLaboratorium::updateOrCreate(
         ['id' => $request->id],
@@ -430,6 +452,18 @@ class LaboranController extends Controller
     $daftarLaboratorium->save();
     return redirect()->route('dashboard.laboran.daftar_laboratorium')->with('success', 'Pemeriksaan berhasil disimpan.');
 
+    }
+
+    public function riwayat_pemeriksaan_pasien(Request $request){
+        if($request->has('search')){
+            $riwayat = DaftarLaboratorium::where('name', 'LIKE', '%'.$request->search. '%')->paginate(7);
+        }else{
+
+            $riwayat = DaftarLaboratorium::where('status', 'selesai')->latest()->paginate(7);
+        }
+        
+
+        return view('laboran.riwayat_pemeriksaan_pasien', compact('riwayat'));
     }
 
 }

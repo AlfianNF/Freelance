@@ -413,7 +413,6 @@
     $('.btn_gas').on('click', function(event) {
       const userId = $(this).data('user-id'); // Mengambil userId dari atribut data 'user-id'    
       // Fetch patient data using AJAX
-      console.log(userId);
       $.ajax({
         url: `/laboran/pasien/${userId}`,
         method: 'GET',

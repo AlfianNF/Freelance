@@ -23,6 +23,10 @@
             <img src="/gambar/clock-history.svg" alt="Icon" class="btn-icon" />
             <span class="btn-text">Riwayat</span> </a
           ><br />
+          <a href="/dashboard/laboran/riwayat_pemeriksaan" class="btn-kiri-1">
+            <img src="/gambar/clock-history.svg" alt="Icon" class="btn-icon" />
+            <span class="btn-text">Riwayat Pemeriksaan Pasien</span> </a
+          ><br />
           <a href="/dashboard/laboran/stock_reagen" class="btn-kiri-1">
             <img src="/gambar/btn-icon7.png" alt="Icon" class="btn-icon" />
             <span class="btn-text">Stock Reagen</span> </a

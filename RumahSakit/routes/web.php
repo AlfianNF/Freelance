@@ -59,6 +59,7 @@ Route::get('/dashboard/laboran/halaman_pemeriksaan',[LaboranController::class,'h
 Route::get('/dashboard/laboran/pemeriksaan/{id}',[LaboranController::class,'pemeriksaan'])->name('dashboard.laboran.pemeriksaan')->middleware('dashboard_laboran');
 Route::post('/dashboard/laboran/pemeriksaan/{id}',[LaboranController::class,'hasil_pemeriksaan_store'])->name('dashboard.laboran.pemeriksaan')->middleware('dashboard_laboran');
 Route::get('/dashboard/laboran/riwayat',[LaboranController::class,'riwayat'])->name('dashboard.laboran.riwayat')->middleware('dashboard_laboran');
+Route::get('/dashboard/laboran/riwayat_pemeriksaan',[LaboranController::class,'riwayat_pemeriksaan_pasien'])->name('dashboard.laboran.riwayat_pemeriksaan_pasien')->middleware('dashboard_laboran');
 Route::get('/dashboard/laboran/stock_reagen',[LaboranController::class,'stock_reagen'])->name('dashboard.laboran.stock_reagen')->middleware('dashboard_laboran');
 Route::post('/dashboard/laboran/stock_reagen',[LaboranController::class,'stock_reagen_store'])->name('dashboard.laboran.stock_reagen')->middleware('dashboard_laboran');
 Route::get('/dashboard/laboran/data_stock',[LaboranController::class,'data_stock'])->name('dashboard.laboran.data_stock')->middleware('dashboard_laboran');
@@ -69,6 +70,7 @@ Route::get('/dashboard/laboran/print/{id}', 'LaboranController@printHasilPemerik
 Route::get('/dashboard/laboran/daftar_laboratorium',[LaboranController::class,'daftar_laboratorium'])->name('dashboard.laboran.daftar_laboratorium')->middleware('dashboard_laboran');
 Route::post('/dashboard/laboran/daftar_laboratorium',[LaboranController::class,'daftar_laboratorium_store'])->name('dashboard.laboran.daftar_laboratorium')->middleware('dashboard_laboran');
 Route::get('/laboran/pasien/{id}', [LaboranController::class, 'getPasienData'])->middleware('dashboard_laboran');
+Route::get('/laboran/riwayat/{id}', [LaboranController::class, 'getRiwayatData'])->middleware('dashboard_laboran');
 
 
 
